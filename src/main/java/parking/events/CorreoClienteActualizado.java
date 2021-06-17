@@ -9,8 +9,8 @@ public class CorreoClienteActualizado extends DomainEvent {
 
 
 
-    private ClienteId clienteId;
-    private CorreoCliente correoCliente;
+    private final ClienteId clienteId;
+    private final CorreoCliente correoCliente;
 
     public CorreoClienteActualizado(ClienteId clienteId, CorreoCliente correoCliente) {
         super("sofka.parking.correoclienteactualizado");

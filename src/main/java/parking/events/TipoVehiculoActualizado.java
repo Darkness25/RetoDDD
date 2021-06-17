@@ -7,8 +7,8 @@ import parking.values.VehiculoId;
 public class TipoVehiculoActualizado extends DomainEvent {
 
 
-    private VehiculoId vehiculoId;
-    private TipoVehiculo tipoVehiculo;
+    private final VehiculoId vehiculoId;
+    private final TipoVehiculo tipoVehiculo;
 
     public TipoVehiculoActualizado(VehiculoId vehiculoId, TipoVehiculo tipoVehiculo) {
         super("sofka.parking.tipovehiculoactualizado");

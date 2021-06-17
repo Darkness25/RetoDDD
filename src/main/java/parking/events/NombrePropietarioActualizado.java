@@ -7,8 +7,8 @@ import parking.values.VehiculoId;
 public class NombrePropietarioActualizado extends DomainEvent {
 
 
-    private VehiculoId vehiculoId;
-    private NombrePropietario nombrePropietario;
+    private final VehiculoId vehiculoId;
+    private final NombrePropietario nombrePropietario;
 
     public NombrePropietarioActualizado(VehiculoId vehiculoId, NombrePropietario nombrePropietario) {
         super("sofka.parking.nombrepropietarioactualizado");

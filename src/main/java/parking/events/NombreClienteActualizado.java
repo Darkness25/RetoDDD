@@ -9,8 +9,8 @@ public class NombreClienteActualizado extends DomainEvent {
 
 
 
-    private ClienteId clienteId;
-    private NombreCliente nombreCliente;
+    private final ClienteId clienteId;
+    private final NombreCliente nombreCliente;
 
     public NombreClienteActualizado(ClienteId clienteId, NombreCliente nombreCliente) {
         super("sofka.parking.nombreclienteactualizado");

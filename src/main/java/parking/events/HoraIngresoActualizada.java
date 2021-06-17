@@ -6,8 +6,8 @@ import parking.values.TiqueteId;
 
 public class HoraIngresoActualizada extends DomainEvent {
 
-    private TiqueteId tiqueteId;
-    private HoraIngreso horaIngreso;
+    private final TiqueteId tiqueteId;
+    private final HoraIngreso horaIngreso;
 
     public HoraIngresoActualizada(TiqueteId tiqueteId, HoraIngreso horaIngreso) {
         super("sofka.parking.horaingresoactualizada");

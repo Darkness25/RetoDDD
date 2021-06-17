@@ -7,9 +7,9 @@ import parking.values.TiqueteId;
 
 public class TiqueteAgregado extends DomainEvent {
 
-    private TiqueteId tiqueteId;
-    private HoraIngreso horaIngreso;
-    private CeldaAsignada celdaAsignada;
+    private final TiqueteId tiqueteId;
+    private final HoraIngreso horaIngreso;
+    private final CeldaAsignada celdaAsignada;
 
     public TiqueteAgregado(TiqueteId tiqueteId, HoraIngreso horaIngreso, CeldaAsignada celdaAsignada) {
         super("sofka.parking.tiqueteagregado");

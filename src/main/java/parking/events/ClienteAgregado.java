@@ -10,9 +10,9 @@ public class ClienteAgregado extends DomainEvent {
 
 
 
-    private ClienteId entityId;
-    private NombreCliente nombreCliente;
-    private CorreoCliente correoCliente;
+    private final ClienteId entityId;
+    private final NombreCliente nombreCliente;
+    private final CorreoCliente correoCliente;
 
     public ClienteAgregado(ClienteId entityId, NombreCliente nombreCliente, CorreoCliente correoCliente) {
         super("sofka.parking.clienteagregado");

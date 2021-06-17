@@ -9,8 +9,8 @@ public class CeldaAsignadaActualizada extends DomainEvent {
 
 
 
-    private TiqueteId tiqueteId;
-    private CeldaAsignada celdaAsignada;
+    private final TiqueteId tiqueteId;
+    private final CeldaAsignada celdaAsignada;
 
     public CeldaAsignadaActualizada(TiqueteId tiqueteId, CeldaAsignada celdaAsignada) {
         super("sofka.parking.celdaasignadaactualizada");
