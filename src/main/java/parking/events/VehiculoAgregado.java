@@ -6,14 +6,28 @@ import parking.values.TipoVehiculo;
 import parking.values.VehiculoId;
 
 public class VehiculoAgregado extends DomainEvent {
-    private final VehiculoId vehiculoid;
+    private final VehiculoId vehiculoId;
     private final TipoVehiculo tipoVehiculo;
     private final NombrePropietario nombrePropietario;
 
-    public VehiculoAgregado(VehiculoId vehiculoid, TipoVehiculo tipoVehiculo, NombrePropietario nombrePropietario) {
+    public VehiculoId VehiculoId() {
+        return vehiculoId;
+    }
+
+    public TipoVehiculo TipoVehiculo() {
+        return tipoVehiculo;
+    }
+
+    public NombrePropietario NombrePropietario() {
+        return nombrePropietario;
+    }
+
+    public VehiculoAgregado(VehiculoId vehiculoId, TipoVehiculo tipoVehiculo, NombrePropietario nombrePropietario) {
         super("sofka.parking.vehiculoagregado");
-        this.vehiculoid = vehiculoid;
+        this.vehiculoId = vehiculoId;
         this.tipoVehiculo = tipoVehiculo;
         this.nombrePropietario = nombrePropietario;
     }
+
+
 }

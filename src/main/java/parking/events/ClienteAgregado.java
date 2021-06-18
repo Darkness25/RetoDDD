@@ -21,15 +21,15 @@ public class ClienteAgregado extends DomainEvent {
         this.correoCliente = correoCliente;
     }
 
-    public ClienteId getEntityId() {
+    public ClienteId EntityId() {
         return entityId;
     }
 
-    public NombreCliente getNombreCliente() {
+    public NombreCliente NombreCliente() {
         return nombreCliente;
     }
 
-    public CorreoCliente getCorreoCliente() {
+    public CorreoCliente CorreoCliente() {
         return correoCliente;
     }
 

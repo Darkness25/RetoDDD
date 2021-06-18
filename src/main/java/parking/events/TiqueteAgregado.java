@@ -18,15 +18,18 @@ public class TiqueteAgregado extends DomainEvent {
         this.celdaAsignada = celdaAsignada;
     }
 
-    public TiqueteId getTiqueteId() {
+    public TiqueteId TiqueteId() {
         return tiqueteId;
     }
 
-    public HoraIngreso getHoraIngreso() {
+    public HoraIngreso HoraIngreso() {
         return horaIngreso;
     }
 
-    public CeldaAsignada getCeldaAsignada() {
+    public CeldaAsignada CeldaAsignada() {
         return celdaAsignada;
     }
+
+
+
 }
