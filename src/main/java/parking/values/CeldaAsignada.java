@@ -13,13 +13,13 @@ public class CeldaAsignada implements ValueObject<String> {
         if(this.value.isBlank()){
             throw new IllegalArgumentException("El campo no puede estar vacio");
         }
-        if(this.value.length() <= 2){
+        if(this.value.length() < 2){
             throw new IllegalArgumentException("EL campo debe tener minimo 2 caracteres");
         }
         if(this.value.length() > 3){
             throw new IllegalArgumentException("EL campo no puede tener mas de 3 caracteres");
         }
-        if(!value.matches("[A-Za-z0-9]")){
+        if(!value.matches("[A-Za-z0-9]*")){
             throw new IllegalArgumentException("El campo solo puede contener numeros y letras");
 
         }

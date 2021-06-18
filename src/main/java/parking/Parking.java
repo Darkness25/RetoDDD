@@ -27,7 +27,7 @@ public class Parking extends AggregateEvent<ParkingId> {
 
     public Parking(ParkingId entityId, TiqueteId tiqueteId) {
         super(entityId);
-        appendChange(new ParkingCreado(entityId)).apply();
+        appendChange(new ParkingCreado(entityId, tiqueteId)).apply();
 
     }
     private Parking(ParkingId entityId){
@@ -50,12 +50,13 @@ public class Parking extends AggregateEvent<ParkingId> {
 
     }
 
-    public void AgregarTiquete(TiqueteId entityId, HoraIngreso horaIngreso, CeldaAsignada celdaAsignada){
+    public void AgregarTiquete(ParkingId parkingId, TiqueteId entityId, HoraIngreso horaIngreso, CeldaAsignada celdaAsignada){
+        Objects.requireNonNull(parkingId);
         Objects.requireNonNull(entityId);
         Objects.requireNonNull(horaIngreso);
         Objects.requireNonNull(celdaAsignada);
 
-        appendChange(new TiqueteAgregado(entityId, horaIngreso, celdaAsignada)).apply();
+        appendChange(new TiqueteAgregado(parkingId,entityId, horaIngreso, celdaAsignada)).apply();
 
     }
 
@@ -118,4 +119,7 @@ public class Parking extends AggregateEvent<ParkingId> {
     public Set<Vehiculo> Vehiculos() {
         return vehiculos;
     }
+
+
+
 }

@@ -1,4 +1,4 @@
-package usecase;
+package usecase.Parking;
 
 import co.com.sofka.business.generic.UseCase;
 import co.com.sofka.business.support.RequestCommand;
@@ -12,6 +12,8 @@ public class CrearParkingUseCase extends UseCase<RequestCommand<CrearParking>, R
     @Override
     public void executeUseCase(RequestCommand<CrearParking> crearParkingRequestCommand) {
         var command = crearParkingRequestCommand.getCommand();
-        var parking = new Parking(command.getEntityId(), gett);
+        var parking = new Parking(command.getEntityId(), command.getTiqueteId());
+
+        emit().onResponse(new ResponseEvents(parking.getUncommittedChanges()));
     }
 }
