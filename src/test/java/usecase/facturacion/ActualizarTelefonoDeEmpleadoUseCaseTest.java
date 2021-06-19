@@ -38,7 +38,7 @@ class ActualizarTelefonoDeEmpleadoUseCaseTest {
     }
 
     @Test
-    void modificarTelefonoDePersonaHappyPath() {
+    void actualizarTelefonoDeEmpleadoHappyPath() {
         //arrange
         var command = new ActualizarTelefonoDeEmpleado(
                 ParkingId.of("xxx-xxx"),
