@@ -8,22 +8,23 @@ import parking.values.TiqueteId;
 
 public class AgregarTiquete implements Command {
 
+
     private final ParkingId parkingId;
     private final TiqueteId entityId;
     private final HoraIngreso horaIngreso;
     private final CeldaAsignada celdaAsignada;
 
-    public AgregarTiquete(ParkingId parkingId, TiqueteId entityId, HoraIngreso horaIngreso, CeldaAsignada celdaAsignada){
 
+    public AgregarTiquete(ParkingId parkingId, TiqueteId entityId, HoraIngreso horaIngreso, CeldaAsignada celdaAsignada){
         this.parkingId = parkingId;
+
+
         this.entityId = entityId;
         this.horaIngreso = horaIngreso;
         this.celdaAsignada = celdaAsignada;
     }
 
-    public ParkingId getParkingId() {
-        return parkingId;
-    }
+
 
     public TiqueteId getEntityId() {
         return entityId;
@@ -35,5 +36,9 @@ public class AgregarTiquete implements Command {
 
     public CeldaAsignada getCeldaAsignada() {
         return celdaAsignada;
+    }
+
+    public ParkingId getParkingId() {
+        return parkingId;
     }
 }
