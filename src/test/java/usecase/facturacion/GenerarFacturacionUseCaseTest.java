@@ -25,7 +25,7 @@ class GenerarFacturacionUseCaseTest {
     }
 
     @Test
-    void generarFacturacionHappyPath() {
+    void generarFacturacionoHappyPath() {
         //arrange
         var command = new GenerarFacturacion(
                 ParkingId.of("xxx-xxx"),
