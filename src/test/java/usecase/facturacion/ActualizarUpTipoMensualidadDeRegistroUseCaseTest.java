@@ -38,7 +38,7 @@ class ActualizarUpTipoMensualidadDeRegistroUseCaseTest {
     }
 
     @Test
-    void aumentarRangoDeSuscripcionHappyPath() {
+    void actualizarUpTipoMensualidadDeRegistroHappyPath() {
         //arrange
         var command = new ActualizarUpTipoMensualidadDeRegistro(
                 ParkingId.of("xxx-xxx"),
@@ -62,34 +62,21 @@ class ActualizarUpTipoMensualidadDeRegistroUseCaseTest {
         Assertions.assertEquals(2, evento.getRango().value());
     }
 
-    @Test
-    void aumentarRangoDeSuscripcionSadPath() {
-        var response = Assertions.assertThrows(IllegalArgumentException.class, () -> {
-            var command = new ActualizarUpTipoMensualidadDeRegistro(
-                    ParkingId.of("xxx-xxx"),
-                    new TipoMensualidad(4)
-            );
-            when(repository.getEventsBy(any())).thenReturn(events());
-        });
 
-        //Assert
-        Assertions.assertEquals("El tipoMensualidad no es valido, debe ser un valor entre 1 y 3", response.getMessage());
-
-    }
 
     private List<DomainEvent> events() {
         return List.of(new FacturacionGenerada(
                 new Registro(new RegistroId("xxx-xx1"),
                         new Precio("50000"),
-                        new TipoMensualidad(1)),
+                        new TipoMensualidad(2)),
                 new Empleado(new EmpleadoId("xxx-xx2"),
-                        new FechaNacimiento(new Date(100, 5, 3)),
-                        new Nombre("Sebastian cano grajales"),
-                        new Correo("sebas99cano@gmail.com"),
-                        new Telefono("3058935891")),
+                        new FechaNacimiento(new Date(2021, 2, 8)),
+                        new Nombre("Jesus Lara"),
+                        new Correo("abc123@gmail.com"),
+                        new Telefono("3207317601")),
                 new Factura(new FacturaId("xxx-xx3"),
-                        new HoraSalida("clave123"),
-                        new NombreUsuario("sebas99cano"))
+                        new HoraSalida("10"),
+                        new ValorTotal("100000"))
         ));
     }
 

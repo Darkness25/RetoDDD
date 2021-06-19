@@ -38,11 +38,11 @@ class ActualizarTelefonoDeEmpleadoUseCaseTest {
     }
 
     @Test
-    void modificarTelefonoDePersonaHappyPath() {
+    void  actualizarTelefonoDeEmpleadoHappyPath() {
         //arrange
         var command = new ActualizarTelefonoDeEmpleado(
                 ParkingId.of("xxx-xxx"),
-                new Telefono("3004225879")
+                new Telefono("3207317601")
         );
 
         when(repository.getEventsBy(any())).thenReturn(events());
@@ -59,22 +59,22 @@ class ActualizarTelefonoDeEmpleadoUseCaseTest {
 
         //assert
 
-        Assertions.assertEquals("3004225879", evento.getTelefono().value());
+        Assertions.assertEquals("3207317601", evento.getTelefono().value());
     }
 
     private List<DomainEvent> events() {
         return List.of(new FacturacionGenerada(
                 new Registro(new RegistroId("xxx-xx1"),
                         new Precio("50000"),
-                        new TipoMensualidad(1)),
+                        new TipoMensualidad(2)),
                 new Empleado(new EmpleadoId("xxx-xx2"),
-                        new FechaNacimiento(new Date(100, 5, 3)),
-                        new Nombre("Sebastian cano grajales"),
-                        new Correo("sebas99cano@gmail.com"),
-                        new Telefono("3058935891")),
+                        new FechaNacimiento(new Date(2021, 2, 8)),
+                        new Nombre("Jesus Lara"),
+                        new Correo("abc123@gmail.com"),
+                        new Telefono("3207317601")),
                 new Factura(new FacturaId("xxx-xx3"),
-                        new HoraSalida("clave123"),
-                        new NombreUsuario("sebas99cano"))
+                        new HoraSalida("10"),
+                        new ValorTotal("100000"))
         ));
     }
 

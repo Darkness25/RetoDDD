@@ -4,18 +4,18 @@ import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class HoraSalida implements ValueObject<String> {
+public class ValorTotal implements ValueObject<String> {
 
     private final String value;
 
-    public HoraSalida(String value) {
+    public ValorTotal(String value) {
 
-        if(value.length()<8){
-            throw new IllegalArgumentException("La clave de usuario no puede ser menor a 8 caracteres");
+        if(value.length()<3){
+            throw new IllegalArgumentException("El valor total no puede ser menor a 3 caracteres");
         }
 
-        if(value.length()>20){
-            throw new IllegalArgumentException("La clave de usuario no puede ser mayor a 20 caracteres");
+        if(value.length()>10){
+            throw new IllegalArgumentException("El valor total no puede ser mayor a 10 caracteres");
         }
 
         this.value = Objects.requireNonNull(value);
@@ -25,7 +25,7 @@ public class HoraSalida implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        HoraSalida that = (HoraSalida) o;
+        ValorTotal that = (ValorTotal) o;
         return Objects.equals(value, that.value);
     }
 

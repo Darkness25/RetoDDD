@@ -8,8 +8,8 @@ import facturacion.commands.ActualizarNombreDeEmpleado;
 
 public class ActualizarNombreDeEmpleadoUseCase extends UseCase<RequestCommand<ActualizarNombreDeEmpleado>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<ActualizarNombreDeEmpleado> modificarNombreDePersonaRequestCommand) {
-        var command = modificarNombreDePersonaRequestCommand.getCommand();
+    public void executeUseCase(RequestCommand<ActualizarNombreDeEmpleado> actualizarNombreDeEmpleadoRequestCommand) {
+        var command = actualizarNombreDeEmpleadoRequestCommand.getCommand();
         var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
 
         usuario.modificarNombreDePersona(command.getNombre());

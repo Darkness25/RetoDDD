@@ -8,8 +8,8 @@ import facturacion.commands.ActualizarUpTipoMensualidadDeRegistro;
 
 public class ActualizarUpTipoMensualidadDeRegistroUseCase extends UseCase<RequestCommand<ActualizarUpTipoMensualidadDeRegistro>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<ActualizarUpTipoMensualidadDeRegistro> aumentarRangoDeSuscripcionUseCaseRequestCommand) {
-        var command = aumentarRangoDeSuscripcionUseCaseRequestCommand.getCommand();
+    public void executeUseCase(RequestCommand<ActualizarUpTipoMensualidadDeRegistro> actualizarUpTipoMensualidadDeRegistroUseCaseRequestCommand) {
+        var command = actualizarUpTipoMensualidadDeRegistroUseCaseRequestCommand.getCommand();
         var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
 
         usuario.aumentarRangoDeSuscripcion(command.getRango());

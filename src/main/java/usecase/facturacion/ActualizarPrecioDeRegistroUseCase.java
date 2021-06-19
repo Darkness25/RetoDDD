@@ -8,8 +8,8 @@ import facturacion.commands.ActualizarPrecioDeRegistro;
 
 public class ActualizarPrecioDeRegistroUseCase extends UseCase<RequestCommand<ActualizarPrecioDeRegistro>, ResponseEvents> {
     @Override
-    public void executeUseCase(RequestCommand<ActualizarPrecioDeRegistro> modificarPrecioDeSuscripcionRequestCommand) {
-        var command = modificarPrecioDeSuscripcionRequestCommand.getCommand();
+    public void executeUseCase(RequestCommand<ActualizarPrecioDeRegistro> actualizarPrecioDeRegistroRequestCommand) {
+        var command = actualizarPrecioDeRegistroRequestCommand.getCommand();
         var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
 
         usuario.modificarPrecioDeSuscripcion(command.getPrecio());

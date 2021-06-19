@@ -26,24 +26,24 @@ import static org.mockito.Mockito.when;
 
 class ActualizarHoraSalidaDeFacturaUseCaseTest {
 
-    private ModificarClaveUsuarioDeCuentaUseCase modificarClaveUsuarioDeCuentaUseCase;
+    private ActualizarHoraSalidaDeFacturaUseCase actualizarHoraSalidaDeFacturaUseCase;
 
     @Mock
     private DomainEventRepository repository;
 
     @BeforeEach
     public void setup() {
-        modificarClaveUsuarioDeCuentaUseCase = new ModificarClaveUsuarioDeCuentaUseCase();
+        actualizarHoraSalidaDeFacturaUseCase = new ActualizarHoraSalidaDeFacturaUseCase();
         repository = mock(DomainEventRepository.class);
-        modificarClaveUsuarioDeCuentaUseCase.addRepository(repository);
+        actualizarHoraSalidaDeFacturaUseCase.addRepository(repository);
     }
 
     @Test
-    void modificarClaveUsuarioDeCuentaHappyPath() {
+    void actualizarHoraSalidaDeFacturaHappyPath() {
         //arrange
         var command = new ActualizarHoraSalidaDeFactura(
                 ParkingId.of("xxx-xxx"),
-                new HoraSalida("nuevaclave")
+                new HoraSalida("10")
         );
 
         when(repository.getEventsBy(any())).thenReturn(events());
@@ -52,29 +52,29 @@ class ActualizarHoraSalidaDeFacturaUseCaseTest {
         var response = UseCaseHandler.getInstance().
                 setIdentifyExecutor("xxx-xxx").
                 syncExecutor(
-                        modificarClaveUsuarioDeCuentaUseCase,
+                        actualizarHoraSalidaDeFacturaUseCase,
                         new RequestCommand<>(command)
                 ).orElseThrow();
 
         var evento = (HoraDeSalidaDeFacturaActualizada) response.getDomainEvents().get(0);
 
         //Assert
-        Assertions.assertEquals("nuevaclave", evento.getClaveUsuario().value());
+        Assertions.assertEquals("10", evento.getClaveUsuario().value());
     }
 
     private List<DomainEvent> events() {
         return List.of(new FacturacionGenerada(
                 new Registro(new RegistroId("xxx-xx1"),
                         new Precio("50000"),
-                        new TipoMensualidad(1)),
+                        new TipoMensualidad(2)),
                 new Empleado(new EmpleadoId("xxx-xx2"),
-                        new FechaNacimiento(new Date(100, 5, 3)),
-                        new Nombre("Sebastian cano grajales"),
-                        new Correo("sebas99cano@gmail.com"),
-                        new Telefono("3058935891")),
+                        new FechaNacimiento(new Date(2021, 2, 8)),
+                        new Nombre("Jesus Lara"),
+                        new Correo("abc123@gmail.com"),
+                        new Telefono("3207317601")),
                 new Factura(new FacturaId("xxx-xx3"),
-                        new HoraSalida("clave123"),
-                        new NombreUsuario("sebas99cano"))
+                        new HoraSalida("10"),
+                        new ValorTotal("100000"))
         ));
     }
 

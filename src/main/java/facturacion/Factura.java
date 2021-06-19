@@ -4,19 +4,19 @@ package facturacion;
 import co.com.sofka.domain.generic.Entity;
 import facturacion.values.FacturaId;
 import facturacion.values.HoraSalida;
-import facturacion.values.NombreUsuario;
+import facturacion.values.ValorTotal;
 
 import java.util.Objects;
 
 public class Factura extends Entity<FacturaId> {
 
     protected HoraSalida horaSalida;
-    protected NombreUsuario nombreUsuario;
+    protected ValorTotal valorTotal;
 
-    public Factura(FacturaId entityId, HoraSalida horaSalida, NombreUsuario nombreUsuario) {
+    public Factura(FacturaId entityId, HoraSalida horaSalida, ValorTotal valorTotal) {
         super(entityId);
         this.horaSalida = horaSalida;
-        this.nombreUsuario = nombreUsuario;
+        this.valorTotal = valorTotal;
     }
 
     public void modificarClaveUsuario(HoraSalida horaSalida){
@@ -27,7 +27,7 @@ public class Factura extends Entity<FacturaId> {
         return this.horaSalida;
     }
 
-    public NombreUsuario nombreUsuario(){
-        return this.nombreUsuario;
+    public ValorTotal nombreUsuario(){
+        return this.valorTotal;
     }
 }
