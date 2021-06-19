@@ -1,4 +1,4 @@
-package co.com.sofka.blog.domain.usuario.values;
+package facturacion.values;
 
 import co.com.sofka.domain.generic.Identity;
 

@@ -1,14 +1,15 @@
-package co.com.sofka.blog.domain.usuario.events;
+package facturacion.events;
 
-import co.com.sofka.blog.domain.usuario.values.Precio;
+
 import co.com.sofka.domain.generic.DomainEvent;
+import facturacion.values.Precio;
 
 public class PrecioDeRegistroActualizado extends DomainEvent {
 
     private final Precio precio;
 
     public PrecioDeRegistroActualizado(Precio precio) {
-        super("blog.usuario.preciodesuscripcionmodificado");
+        super("sofka.facturacion.preciodemensualidadactualizada");
         this.precio = precio;
     }
 

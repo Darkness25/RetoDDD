@@ -1,8 +1,9 @@
-package co.com.sofka.blog.domain.usuario.commands;
+package facturacion.commands;
 
-import co.com.sofka.blog.domain.usuario.values.ParkingId;
-import co.com.sofka.blog.domain.usuario.values.TipoMensualidad;
+
 import co.com.sofka.domain.generic.Command;
+import facturacion.values.ParkingId;
+import facturacion.values.TipoMensualidad;
 
 public class ActualizarDownTipoMensualidadDeRegistro implements Command {
 

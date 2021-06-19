@@ -1,14 +1,14 @@
-package co.com.sofka.blog.domain.usuario.events;
+package facturacion.events;
 
-import co.com.sofka.blog.domain.usuario.values.TipoMensualidad;
 import co.com.sofka.domain.generic.DomainEvent;
+import facturacion.values.TipoMensualidad;
 
 public class TipoDeMensualidadActualizadaDown extends DomainEvent {
 
     private final TipoMensualidad tipoMensualidad;
 
     public TipoDeMensualidadActualizadaDown(TipoMensualidad tipoMensualidad) {
-        super("blog.usuario.rengodesuscripciondisminuido");
+        super("sofka.facturacion.tipodemensualidadactualizadadown");
         this.tipoMensualidad = tipoMensualidad;
     }
 

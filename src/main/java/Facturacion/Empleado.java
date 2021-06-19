@@ -1,7 +1,8 @@
-package co.com.sofka.blog.domain.usuario;
+package facturacion;
 
-import co.com.sofka.blog.domain.usuario.values.*;
+
 import co.com.sofka.domain.generic.Entity;
+import facturacion.values.*;
 
 import java.util.Objects;
 

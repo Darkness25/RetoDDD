@@ -1,10 +1,10 @@
-package co.com.sofka.blog.domain.usuario.commands;
+package facturacion.commands;
 
-import co.com.sofka.blog.domain.usuario.Factura;
-import co.com.sofka.blog.domain.usuario.Empleado;
-import co.com.sofka.blog.domain.usuario.Registro;
-import co.com.sofka.blog.domain.usuario.values.ParkingId;
 import co.com.sofka.domain.generic.Command;
+import facturacion.Empleado;
+import facturacion.Factura;
+import facturacion.Registro;
+import facturacion.values.ParkingId;
 
 public class GenerarFacturacion implements Command {
 

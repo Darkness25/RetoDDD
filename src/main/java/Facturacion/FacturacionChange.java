@@ -1,7 +1,7 @@
-package co.com.sofka.blog.domain.usuario;
+package facturacion;
 
-import co.com.sofka.blog.domain.usuario.events.*;
 import co.com.sofka.domain.generic.EventChange;
+import facturacion.events.*;
 
 public class FacturacionChange extends EventChange {
     public FacturacionChange(Facturacion facturacion) {

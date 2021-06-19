@@ -1,9 +1,10 @@
-package co.com.sofka.blog.domain.usuario;
+package facturacion;
 
-import co.com.sofka.blog.domain.usuario.values.HoraSalida;
-import co.com.sofka.blog.domain.usuario.values.FacturaId;
-import co.com.sofka.blog.domain.usuario.values.NombreUsuario;
+
 import co.com.sofka.domain.generic.Entity;
+import facturacion.values.FacturaId;
+import facturacion.values.HoraSalida;
+import facturacion.values.NombreUsuario;
 
 import java.util.Objects;
 

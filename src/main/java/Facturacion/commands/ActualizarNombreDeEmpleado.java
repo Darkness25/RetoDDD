@@ -1,8 +1,9 @@
-package co.com.sofka.blog.domain.usuario.commands;
+package facturacion.commands;
 
-import co.com.sofka.blog.domain.usuario.values.ParkingId;
-import co.com.sofka.blog.domain.usuario.values.Nombre;
+
 import co.com.sofka.domain.generic.Command;
+import facturacion.values.Nombre;
+import facturacion.values.ParkingId;
 
 public class ActualizarNombreDeEmpleado implements Command {
 

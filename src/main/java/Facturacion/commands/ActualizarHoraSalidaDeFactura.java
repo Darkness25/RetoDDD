@@ -1,8 +1,9 @@
-package co.com.sofka.blog.domain.usuario.commands;
+package facturacion.commands;
 
-import co.com.sofka.blog.domain.usuario.values.HoraSalida;
-import co.com.sofka.blog.domain.usuario.values.ParkingId;
+
 import co.com.sofka.domain.generic.Command;
+import facturacion.values.HoraSalida;
+import facturacion.values.ParkingId;
 
 public class ActualizarHoraSalidaDeFactura implements Command {
 

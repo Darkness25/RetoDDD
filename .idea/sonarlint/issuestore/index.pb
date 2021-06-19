@@ -35,8 +35,6 @@ i
 9src/main/java/parking/events/TipoVehiculoActualizado.java,5\a\5a676687e38d6006f81fd1ecfedde82dd6af232c
 b
 2src/main/java/parking/events/VehiculoAgregado.java,c\c\cc3f6bce2bfc533cfd8a1d170cdb3b838c60de5f
-a
-1src/main/java/parking/events/ClienteAgregado.java,5\0\50fbf68ea352456c6001f820f87f7b81024810a2
 \
 ,src/main/java/parking/values/VehiculoId.java,6\2\6254ce276bc8c45076a1a136526eb0b28f810966
 k

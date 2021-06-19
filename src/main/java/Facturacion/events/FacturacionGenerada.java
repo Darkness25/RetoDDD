@@ -1,9 +1,9 @@
-package co.com.sofka.blog.domain.usuario.events;
+package facturacion.events;
 
-import co.com.sofka.blog.domain.usuario.Factura;
-import co.com.sofka.blog.domain.usuario.Empleado;
-import co.com.sofka.blog.domain.usuario.Registro;
 import co.com.sofka.domain.generic.DomainEvent;
+import facturacion.Empleado;
+import facturacion.Factura;
+import facturacion.Registro;
 
 public class FacturacionGenerada extends DomainEvent {
 
@@ -13,7 +13,7 @@ public class FacturacionGenerada extends DomainEvent {
     private final Factura factura;
 
     public FacturacionGenerada(Registro registro, Empleado empleado, Factura factura) {
-        super("blog.usuario.usuariocreado");
+        super("sofka.facturacion.facturaciongenerada");
         this.registro = registro;
         this.empleado = empleado;
         this.factura = factura;

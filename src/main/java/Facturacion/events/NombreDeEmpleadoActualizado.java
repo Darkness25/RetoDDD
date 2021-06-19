@@ -1,14 +1,14 @@
-package co.com.sofka.blog.domain.usuario.events;
+package facturacion.events;
 
-import co.com.sofka.blog.domain.usuario.values.Nombre;
 import co.com.sofka.domain.generic.DomainEvent;
+import facturacion.values.Nombre;
 
 public class NombreDeEmpleadoActualizado extends DomainEvent {
 
     private final Nombre nombre;
 
     public NombreDeEmpleadoActualizado(Nombre nombre) {
-        super("blog.usuario.nombredepersonamodificado");
+        super("sofka.facturacion.nombredeempleadoactualizado");
         this.nombre = nombre;
     }
 

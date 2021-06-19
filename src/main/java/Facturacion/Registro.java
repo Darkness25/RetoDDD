@@ -1,9 +1,9 @@
-package co.com.sofka.blog.domain.usuario;
+package facturacion;
 
-import co.com.sofka.blog.domain.usuario.values.RegistroId;
-import co.com.sofka.blog.domain.usuario.values.Precio;
-import co.com.sofka.blog.domain.usuario.values.TipoMensualidad;
 import co.com.sofka.domain.generic.Entity;
+import facturacion.values.Precio;
+import facturacion.values.RegistroId;
+import facturacion.values.TipoMensualidad;
 
 public class Registro extends Entity<RegistroId>{
 

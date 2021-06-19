@@ -1,9 +1,9 @@
-package co.com.sofka.blog.domain.usuario;
+package facturacion;
 
-import co.com.sofka.blog.domain.usuario.events.*;
-import co.com.sofka.blog.domain.usuario.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 import co.com.sofka.domain.generic.DomainEvent;
+import facturacion.events.*;
+import facturacion.values.*;
 
 import java.util.List;
 import java.util.Objects;
