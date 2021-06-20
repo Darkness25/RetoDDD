@@ -15,11 +15,11 @@ public class ActualizarHoraSalidaDeFactura implements Command {
         this.horaSalida = horaSalida;
     }
 
-    public ParkingId getIdUsuario() {
+    public ParkingId getParkingId() {
         return parkingId;
     }
 
-    public HoraSalida getClaveUsuario() {
+    public HoraSalida getHoraSalida() {
         return horaSalida;
     }
 }

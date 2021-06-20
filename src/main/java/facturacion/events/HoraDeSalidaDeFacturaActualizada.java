@@ -12,7 +12,7 @@ public class HoraDeSalidaDeFacturaActualizada extends DomainEvent {
         this.horaSalida = horaSalida;
     }
 
-    public HoraSalida getClaveUsuario() {
+    public HoraSalida getHoraSalida() {
         return horaSalida;
     }
 }

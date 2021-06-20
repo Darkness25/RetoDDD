@@ -19,15 +19,15 @@ public class Factura extends Entity<FacturaId> {
         this.valorTotal = valorTotal;
     }
 
-    public void modificarClaveUsuario(HoraSalida horaSalida){
+    public void modificarHoraSalidaDefactura(HoraSalida horaSalida){
         this.horaSalida = Objects.requireNonNull(horaSalida);
     }
 
-    public HoraSalida claveUsuario(){
+    public HoraSalida horaSalida(){
         return this.horaSalida;
     }
 
-    public ValorTotal nombreUsuario(){
+    public ValorTotal valorTotal(){
         return this.valorTotal;
     }
 }

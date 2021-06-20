@@ -20,19 +20,19 @@ public class GenerarFacturacion implements Command {
         this.factura = factura;
     }
 
-    public ParkingId getIdUsuario() {
+    public ParkingId getParkingId() {
         return parkingId;
     }
 
-    public Registro getSuscripcion() {
+    public Registro getRegistro() {
         return registro;
     }
 
-    public Empleado getPersona() {
+    public Empleado getEmpleado() {
         return empleado;
     }
 
-    public Factura getCuenta() {
+    public Factura getFactura() {
         return factura;
     }
 }

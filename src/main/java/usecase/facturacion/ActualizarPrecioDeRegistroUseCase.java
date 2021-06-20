@@ -10,9 +10,9 @@ public class ActualizarPrecioDeRegistroUseCase extends UseCase<RequestCommand<Ac
     @Override
     public void executeUseCase(RequestCommand<ActualizarPrecioDeRegistro> actualizarPrecioDeRegistroRequestCommand) {
         var command = actualizarPrecioDeRegistroRequestCommand.getCommand();
-        var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
+        var facturacion = Facturacion.from(command.getParkingId(), retrieveEvents(command.getParkingId().value()));
 
-        usuario.modificarPrecioDeSuscripcion(command.getPrecio());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        facturacion.modificarPrecioDeRegistro(command.getPrecio());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 }

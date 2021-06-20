@@ -10,9 +10,9 @@ public class ActualizarNombreDeEmpleadoUseCase extends UseCase<RequestCommand<Ac
     @Override
     public void executeUseCase(RequestCommand<ActualizarNombreDeEmpleado> actualizarNombreDeEmpleadoRequestCommand) {
         var command = actualizarNombreDeEmpleadoRequestCommand.getCommand();
-        var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
+        var facturacion = Facturacion.from(command.getParkingId(), retrieveEvents(command.getParkingId().value()));
 
-        usuario.modificarNombreDePersona(command.getNombre());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        facturacion.modificarNombreDePersona(command.getNombre());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 }

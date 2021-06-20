@@ -13,8 +13,8 @@ public class Telefono implements ValueObject<String> {
             throw new IllegalArgumentException("El telefono no puede ser menor a 8 caracteres");
         }
 
-        if(value.length()>15){
-            throw new IllegalArgumentException("El telefono no puede ser mayor a 15 caracteres");
+        if(value.length()>10){
+            throw new IllegalArgumentException("El telefono no puede ser mayor a 10caracteres");
         }
         this.value = Objects.requireNonNull(value);
     }

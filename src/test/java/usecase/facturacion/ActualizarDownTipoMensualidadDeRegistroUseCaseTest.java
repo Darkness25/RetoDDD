@@ -57,7 +57,7 @@ class ActualizarDownTipoMensualidadDeRegistroUseCaseTest {
         var evento = (TipoDeMensualidadActualizadaDown) response.getDomainEvents().get(0);
 
         //assert
-        Assertions.assertEquals(1, evento.getRango().value());
+        Assertions.assertEquals(1, evento.getTipoMensualidad().value());
     }
 
 

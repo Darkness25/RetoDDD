@@ -59,7 +59,7 @@ class ActualizarUpTipoMensualidadDeRegistroUseCaseTest {
 
         //assert
 
-        Assertions.assertEquals(2, evento.getRango().value());
+        Assertions.assertEquals(2, evento.getTipoMensualidad().value());
     }
 
 

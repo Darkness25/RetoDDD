@@ -19,15 +19,15 @@ public class FacturacionGenerada extends DomainEvent {
         this.factura = factura;
     }
 
-    public Registro getSuscripcion() {
+    public Registro getRegistro() {
         return registro;
     }
 
-    public Empleado getPersona() {
+    public Empleado getEmpleado() {
         return empleado;
     }
 
-    public Factura getCuenta() {
+    public Factura getFactura() {
         return factura;
     }
 }

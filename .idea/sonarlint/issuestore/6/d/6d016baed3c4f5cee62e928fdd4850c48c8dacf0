@@ -1,0 +1,11 @@
+
+w
+java:S1450"ZRemove the "horaIngreso" field and declare it as a local variable in the relevant methods.(Æ©òŸ8æöÅ·¢/
+z
+java:S1450"XRemove the "tiqueteId" field and declare it as a local variable in the relevant methods.(„Ê³ùûÿÿÿÿ8Ù×Æ·¢/
+H
+java:S2160"+Override the "equals" method in this class.(œÆ¢™8·œ©·¢/
+O
+java:S1068"-Remove this unused "tiqueteId" private field.(„Ê³ùûÿÿÿÿ8ä×Æ·¢/
+L
+java:S1068"/Remove this unused "horaIngreso" private field.(Æ©òŸ8ñöÅ·¢/

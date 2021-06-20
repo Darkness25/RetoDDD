@@ -10,9 +10,9 @@ public class ActualizarUpTipoMensualidadDeRegistroUseCase extends UseCase<Reques
     @Override
     public void executeUseCase(RequestCommand<ActualizarUpTipoMensualidadDeRegistro> actualizarUpTipoMensualidadDeRegistroUseCaseRequestCommand) {
         var command = actualizarUpTipoMensualidadDeRegistroUseCaseRequestCommand.getCommand();
-        var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
+        var facturacion = Facturacion.from(command.getParkingId(), retrieveEvents(String.valueOf(command.getTipoMensualidad().value())));
 
-        usuario.aumentarRangoDeSuscripcion(command.getRango());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        facturacion.aumentarTipoMensualidadDeRegistro(command.getTipoMensualidad());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 }

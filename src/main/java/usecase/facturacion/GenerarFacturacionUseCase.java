@@ -10,7 +10,7 @@ public class GenerarFacturacionUseCase extends UseCase<RequestCommand<GenerarFac
     @Override
     public void executeUseCase(RequestCommand<GenerarFacturacion> generarFacturacionRequestCommand) {
         var commnad = generarFacturacionRequestCommand.getCommand();
-        var usuario = new Facturacion(commnad.getIdUsuario(), commnad.getSuscripcion(), commnad.getPersona(), commnad.getCuenta());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        var facturacion = new Facturacion(commnad.getParkingId(), commnad.getRegistro(), commnad.getEmpleado(), commnad.getFactura());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 }

@@ -11,9 +11,9 @@ public class ModificarTelefonoDePersonaUseCase extends UseCase<RequestCommand<Ac
     @Override
     public void executeUseCase(RequestCommand<ActualizarTelefonoDeEmpleado> modificarTelefonoDePersonaRequestCommand) {
         var command = modificarTelefonoDePersonaRequestCommand.getCommand();
-        var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
+        var facturacion = Facturacion.from(command.getParkingId(), retrieveEvents(command.getParkingId().value()));
 
-        usuario.modificarTelefonoDePersona(command.getTelefono());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        facturacion.modificarTelefonoDePersona(command.getTelefono());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 }

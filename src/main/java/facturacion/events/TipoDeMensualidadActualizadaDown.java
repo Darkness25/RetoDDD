@@ -12,7 +12,7 @@ public class TipoDeMensualidadActualizadaDown extends DomainEvent {
         this.tipoMensualidad = tipoMensualidad;
     }
 
-    public TipoMensualidad getRango() {
+    public TipoMensualidad getTipoMensualidad() {
         return tipoMensualidad;
     }
 }

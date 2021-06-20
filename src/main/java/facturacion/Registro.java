@@ -16,11 +16,11 @@ public class Registro extends Entity<RegistroId>{
         this.tipoMensualidad = tipoMensualidad;
     }
 
-    public void aumentarRango(TipoMensualidad tipoMensualidad){
+    public void aumentarTipoMensualidad(TipoMensualidad tipoMensualidad){
         this.tipoMensualidad = tipoMensualidad;
     }
 
-    public void disminuirRango(TipoMensualidad tipoMensualidad){
+    public void disminuirTipoMensualidad(TipoMensualidad tipoMensualidad){
         this.tipoMensualidad = tipoMensualidad;
     }
 
@@ -32,7 +32,7 @@ public class Registro extends Entity<RegistroId>{
         return this.precio;
     }
 
-    public TipoMensualidad rango(){
+    public TipoMensualidad tipoMensualidad(){
         return this.tipoMensualidad;
     }
 }

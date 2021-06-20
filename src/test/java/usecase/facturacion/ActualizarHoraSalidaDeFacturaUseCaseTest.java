@@ -59,7 +59,7 @@ class ActualizarHoraSalidaDeFacturaUseCaseTest {
         var evento = (HoraDeSalidaDeFacturaActualizada) response.getDomainEvents().get(0);
 
         //Assert
-        Assertions.assertEquals("10", evento.getClaveUsuario().value());
+        Assertions.assertEquals("10", evento.getHoraSalida().value());
     }
 
     private List<DomainEvent> events() {

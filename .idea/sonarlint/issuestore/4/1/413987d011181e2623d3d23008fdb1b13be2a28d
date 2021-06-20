@@ -1,9 +1,0 @@
-
-\
-java:S1128"ARemove this unused import 'co.com.sofka.domain.generic.Identity'.(ñ¬Ÿ¡ùÿÿÿÿ
-M
-java:S2160"+Override the "equals" method in this class.(®âÚšÿÿÿÿÿ8¤Ÿ½”¢/
-b	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ö£õ@
-h	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã–ÉÊýÿÿÿÿ
-i	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ð˜˜o8ËªÑã¡/
-o	java:S100!"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ªÓÍ­ûÿÿÿÿ8÷ÃÑã¡/

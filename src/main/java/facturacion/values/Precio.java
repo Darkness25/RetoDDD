@@ -22,7 +22,7 @@ public class Precio implements ValueObject<String> {
             throw new IllegalArgumentException("El precio de la registro debe tener mas de 1 caracter");
         }
 
-        if(precio.length()>20){
+        if(precio.length()>10){
             throw new IllegalArgumentException("El precio de la registro no puede tener mas de 10 caracteres");
         }
     }

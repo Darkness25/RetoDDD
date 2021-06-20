@@ -13,7 +13,7 @@ public class ActualizarPrecioDeRegistro implements Command {
         this.precio = precio;
     }
 
-    public ParkingId getIdUsuario() {
+    public ParkingId getParkingId() {
         return parkingId;
     }
 

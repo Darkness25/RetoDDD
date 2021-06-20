@@ -15,7 +15,7 @@ public class ActualizarNombreDeEmpleado implements Command {
         this.nombre = nombre;
     }
 
-    public ParkingId getIdUsuario() {
+    public ParkingId getParkingId() {
         return parkingId;
     }
 

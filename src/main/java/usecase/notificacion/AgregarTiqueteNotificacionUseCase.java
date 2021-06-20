@@ -13,7 +13,7 @@ public class AgregarTiqueteNotificacionUseCase extends UseCase<TriggeredEvent<Ti
         var senderEmailService = getService(SenderEmailService.class).orElseThrow();
 
         var email = tiqueteService.getCorreoPorIdUsuario(event.getTipoVehiculo().value().parkingId());
-        senderEmailService.sendEmail(email, "tiquete agregada");
+        senderEmailService.sendEmail(email, "tiquete agregado");
     }
 }
 

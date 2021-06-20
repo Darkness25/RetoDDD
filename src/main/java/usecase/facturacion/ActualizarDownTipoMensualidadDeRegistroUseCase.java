@@ -10,9 +10,9 @@ public class ActualizarDownTipoMensualidadDeRegistroUseCase extends UseCase<Requ
     @Override
     public void executeUseCase(RequestCommand<ActualizarDownTipoMensualidadDeRegistro> disminuirMensualidadRequestCommand) {
         var command = disminuirMensualidadRequestCommand.getCommand();
-        var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
+        var facturacion = Facturacion.from(command.getParkingId(), retrieveEvents(command.getParkingId().value()));
 
-        usuario.disminuirRangoDeSuscripcion(command.getRango());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        facturacion.disminuirTipoMensualidadDeRegistro(command.getTipoMensualidad());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 }

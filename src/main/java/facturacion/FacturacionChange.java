@@ -7,13 +7,13 @@ public class FacturacionChange extends EventChange {
     public FacturacionChange(Facturacion facturacion) {
 
         apply((FacturacionGenerada event)->{
-            facturacion.registro = event.getSuscripcion();
-            facturacion.empleado = event.getPersona();
-            facturacion.factura = event.getCuenta();
+            facturacion.registro = event.getRegistro();
+            facturacion.empleado = event.getEmpleado();
+            facturacion.factura = event.getFactura();
         });
 
         apply((HoraDeSalidaDeFacturaActualizada event)->{
-            facturacion.factura.modificarClaveUsuario(event.getClaveUsuario());
+            facturacion.factura.modificarHoraSalidaDefactura(event.getHoraSalida());
         });
 
         apply((NombreDeEmpleadoActualizado event)->{
@@ -25,11 +25,11 @@ public class FacturacionChange extends EventChange {
         });
 
         apply((TipoDeMensualidadActualizadaUp event)->{
-            facturacion.registro.aumentarRango(event.getRango());
+            facturacion.registro.aumentarTipoMensualidad(event.getTipoMensualidad());
         });
 
         apply((TipoDeMensualidadActualizadaDown event)->{
-            facturacion.registro.disminuirRango(event.getRango());
+            facturacion.registro.disminuirTipoMensualidad(event.getTipoMensualidad());
         });
 
         apply((PrecioDeRegistroActualizado event)->{

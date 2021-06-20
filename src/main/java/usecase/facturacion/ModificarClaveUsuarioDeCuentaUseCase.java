@@ -10,10 +10,10 @@ public class ModificarClaveUsuarioDeCuentaUseCase extends UseCase<RequestCommand
     @Override
     public void executeUseCase(RequestCommand<ActualizarHoraSalidaDeFactura> modificarClaveUsuarioDeCuentaRequestCommand) {
         var command = modificarClaveUsuarioDeCuentaRequestCommand.getCommand();
-        var usuario = Facturacion.from(command.getIdUsuario(), retrieveEvents(command.getIdUsuario().value()));
+        var facturacion = Facturacion.from(command.getParkingId(), retrieveEvents(command.getParkingId().value()));
 
-        usuario.modificarClaveUsuarioDeCuenta(command.getClaveUsuario());
-        emit().onResponse(new ResponseEvents(usuario.getUncommittedChanges()));
+        facturacion.modificarHoraSalidaDefactura(command.getHoraSalida());
+        emit().onResponse(new ResponseEvents(facturacion.getUncommittedChanges()));
     }
 
 }

@@ -15,7 +15,7 @@ public class NombreUsuario implements ValueObject<String> {
         }
 
         if(value.length()>20){
-            throw new IllegalArgumentException("El nombreCliente de usuario no puede ser mayor a 20 caracteres");
+            throw new IllegalArgumentException("El nombreCliente de usuario no puede ser mayor a 100 caracteres");
         }
 
         this.value = Objects.requireNonNull(value);

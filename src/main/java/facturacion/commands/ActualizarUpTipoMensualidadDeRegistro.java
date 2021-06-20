@@ -15,11 +15,11 @@ public class ActualizarUpTipoMensualidadDeRegistro implements Command {
         this.tipoMensualidad = tipoMensualidad;
     }
 
-    public ParkingId getIdUsuario() {
+    public ParkingId getParkingId() {
         return parkingId;
     }
 
-    public TipoMensualidad getRango() {
+    public TipoMensualidad getTipoMensualidad() {
         return tipoMensualidad;
     }
 }

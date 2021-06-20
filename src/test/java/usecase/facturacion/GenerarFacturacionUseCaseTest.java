@@ -51,11 +51,11 @@ class GenerarFacturacionUseCaseTest {
         //asserts
         FacturacionGenerada facturacionGenerada = (FacturacionGenerada) events.get(0);
 
-        Assertions.assertEquals("Jesus Lara", facturacionGenerada.getPersona().nombre().value());
-        Assertions.assertEquals("abc123@gmail.com", facturacionGenerada.getPersona().correo().value());
-        Assertions.assertEquals("10", facturacionGenerada.getCuenta().claveUsuario().value());
-        Assertions.assertEquals("100000", facturacionGenerada.getCuenta().nombreUsuario().value());
-        Assertions.assertEquals(1, facturacionGenerada.getSuscripcion().rango().value());
+        Assertions.assertEquals("Jesus Lara", facturacionGenerada.getEmpleado().nombre().value());
+        Assertions.assertEquals("abc123@gmail.com", facturacionGenerada.getEmpleado().correo().value());
+        Assertions.assertEquals("10", facturacionGenerada.getFactura().horaSalida().value());
+        Assertions.assertEquals("100000", facturacionGenerada.getFactura().valorTotal().value());
+        Assertions.assertEquals(1, facturacionGenerada.getRegistro().tipoMensualidad().value());
     }
 
 }

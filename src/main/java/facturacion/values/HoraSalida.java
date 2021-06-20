@@ -10,7 +10,7 @@ public class HoraSalida implements ValueObject<String> {
 
     public HoraSalida(String value) {
 
-        if(value.length()<2){
+        if(value.length()<1){
             throw new IllegalArgumentException("La Hora de salida no puede ser menor a 2 caracteres");
         }
 

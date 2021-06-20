@@ -14,7 +14,7 @@ public class ActualizarTelefonoDeEmpleado implements Command {
         this.telefono = telefono;
     }
 
-    public ParkingId getIdUsuario() {
+    public ParkingId getParkingId() {
         return parkingId;
     }
 
