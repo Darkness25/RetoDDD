@@ -10,11 +10,11 @@ public class Nombre implements ValueObject<String> {
 
     public Nombre(String value) {
         if(value.length()<5){
-            throw new IllegalArgumentException("El nombre no puede ser menor a 5 caracteres");
+            throw new IllegalArgumentException("El nombreCliente no puede ser menor a 5 caracteres");
         }
 
         if(value.length()>75){
-            throw new IllegalArgumentException("El nombre no puede ser mayor a 100 caracteres");
+            throw new IllegalArgumentException("El nombreCliente no puede ser mayor a 100 caracteres");
         }
         this.value = Objects.requireNonNull(value);
     }

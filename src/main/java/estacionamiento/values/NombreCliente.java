@@ -1,21 +1,21 @@
-package facturacion.values;
+package estacionamiento.values;
 
 import co.com.sofka.domain.generic.ValueObject;
 
 import java.util.Objects;
 
-public class NombreUsuario implements ValueObject<String> {
+public class NombreCliente implements ValueObject<String> {
 
     private final String value;
 
-    public NombreUsuario(String value) {
+    public NombreCliente(String value) {
 
-        if(value.length()<8){
-            throw new IllegalArgumentException("El nombreCliente de usuario no puede ser menor a 8 caracteres");
+        if(value.length()<5){
+            throw new IllegalArgumentException("El nombre del cliente no puede ser menor a 5 caracteres");
         }
 
-        if(value.length()>20){
-            throw new IllegalArgumentException("El nombreCliente de usuario no puede ser mayor a 20 caracteres");
+        if(value.length()>50){
+            throw new IllegalArgumentException("El nombre del cliente no puede ser mayor a 50 caracteres");
         }
 
         this.value = Objects.requireNonNull(value);
@@ -25,7 +25,7 @@ public class NombreUsuario implements ValueObject<String> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        NombreUsuario that = (NombreUsuario) o;
+        NombreCliente that = (NombreCliente) o;
         return Objects.equals(value, that.value);
     }
 
